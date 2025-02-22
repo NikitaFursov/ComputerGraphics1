@@ -13,7 +13,6 @@ int main() {
         return -1;
     }
 
-
     GLFWwindow* window = glfwCreateWindow(512, 512, "Window", NULL, NULL);
 
     if (!window) {
@@ -41,7 +40,6 @@ int main() {
         glVertex2f(0.0f, 0.5f);
         glVertex2f(-0.5f, -0.5f);
         glVertex2f(0.5f, -0.5f);
- 
 
         glEnd();
 
