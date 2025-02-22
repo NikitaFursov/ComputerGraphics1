@@ -1,4 +1,7 @@
-﻿#define GLEW_DLL
+﻿//Выполнил Фурсов Н.Т. АСУб-23-1
+//Вариант 19
+//Фигура: Треугольник, Цвет фигуры: (0.3,1.0,1.0), Цвет фона: (1.0,1.0,1.0)
+#define GLEW_DLL
 #define GLFW_DLL
 #include <glew.h>
 #include <glfw3.h>
@@ -9,6 +12,7 @@ int main() {
         fprintf(stderr, "ERROR: could not start GLFW3.\n");
         return -1;
     }
+
 
     GLFWwindow* window = glfwCreateWindow(512, 512, "Window", NULL, NULL);
 
@@ -21,7 +25,7 @@ int main() {
 
     glewExperimental = GL_TRUE;
 
-    if (glewInit != GLEW_OK) {
+    if (glewInit() != GLEW_OK) {
         fprintf(stderr, "Error initializing GLEW: %s\n", glewGetErrorString(glewInit()));
         return -1;
     }
@@ -37,6 +41,7 @@ int main() {
         glVertex2f(0.0f, 0.5f);
         glVertex2f(-0.5f, -0.5f);
         glVertex2f(0.5f, -0.5f);
+ 
 
         glEnd();
 
